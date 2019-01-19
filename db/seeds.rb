@@ -12,3 +12,10 @@
                           body: "Este é o conteudo *#{x}* do meu artigo *#{x}* ## Fim")
   ArticleRendererWorker.new.perform(article.id)
 end
+
+
+User.create(
+  email: 'mauriciojs.junior@gmail.com',
+  password: '123mudar',
+  password_confirmation: '123mudar'
+)
