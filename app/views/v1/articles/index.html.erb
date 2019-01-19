@@ -1,0 +1,8 @@
+<h1>Todos os artigos <%= Article.count%></h1>
+<ul>
+  <% @articles.each do |article| %>
+    <li class="article__title"> <%= article.title %> 
+      <ul><li> <%= article.body_rendered.html_safe %> </li></ul>
+    </li>
+  <% end %>
+</ul>
