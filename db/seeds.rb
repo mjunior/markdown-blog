@@ -6,16 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
-10.times do |x| 
-  article = Article.create(title: "Meu artigo #{x}", 
-                          body: "Este é o conteudo *#{x}* do meu artigo *#{x}* ## Fim")
-  ArticleRendererWorker.new.perform(article.id)
-end
-
-
 User.create(
   email: 'mauriciojs.junior@gmail.com',
   password: '123mudar',
   password_confirmation: '123mudar'
 )
+
+10.times do |x| 
+  article = Article.create(title: "Meu artigo #{x}", 
+                          body: "Este é o conteudo *#{x}* do meu artigo *#{x}* ## Fim",
+                          author: User.last)
+  ArticleRendererWorker.new.perform(article.id)
+end
