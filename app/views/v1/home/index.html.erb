@@ -2,7 +2,7 @@
 <ul>
   <% @articles.each do |article| %>
     <li class="article__title"> <%= article.slug %> 
-      <ul><li> <%= article.body_rendered.html_safe %> </li></ul>
+      <ul><li> <%= article.body %> </li></ul>
     </li>
   <% end %>
 </ul>
