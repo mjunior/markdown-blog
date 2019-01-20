@@ -1,6 +1,6 @@
 class V1::HomeController < ApplicationController
   def index
-    @articles = Article.all
+    @articles = ArticleDecorator.collection(Article.all)
   end
 
   def show
