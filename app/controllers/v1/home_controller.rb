@@ -4,6 +4,6 @@ class V1::HomeController < ApplicationController
   end
 
   def show
-    @article = Article.friendly.find(params[:slug])
+    @article = ArticleDecorator.new(Article.friendly.find(params[:slug]))
   end
 end
