@@ -4,9 +4,8 @@ class ArticleRendererWorker
   def perform(article_id)
     article = Article.find_by(id: article_id)
     return if article.nil?
-    renderer = Redcarpet::Render::HTML.new({escape_html: true})
-    markdown = Redcarpet::Markdown.new(renderer,{})
-    html = markdown.render(article.body)
+
+    html = MarkdownRendererService.new(article.body).html
     article.update!(body_rendered: html)
   end
 end
