@@ -1,3 +1,28 @@
-// Place all the styles related to the v1/home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+a{
+  color: #000;
+}
+.painel-header{
+  h1{
+    font-size: 16px;
+  }
+  border-bottom: 1px dashed #ddd;
+}
+
+.painel-body{
+  font-size: 14px; 
+}
+
+.painel{
+  padding: 15px;
+  border: 1px solid #ddd;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+.published_at{
+  font-size: 12px;
+  color: #aaa;
+  margin-top: -7px;
+  display: block;
+  margin-bottom: 7px;
+}

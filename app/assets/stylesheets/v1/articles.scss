@@ -1,3 +1,32 @@
-// Place all the styles related to the v1/articles controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.input-form{
+  width: 100%;
+  border: none;
+  margin: 5px 0;
+  border-left: 1px solid #ddd;
+  padding-left: 15px;
+}
+
+.input-title{
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.input-body{
+  height: 80vh;
+}
+
+.publish-button{
+  position: absolute;
+  top: 17px;
+  right: 14%;
+  background: transparent;
+  border: 2px solid;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
