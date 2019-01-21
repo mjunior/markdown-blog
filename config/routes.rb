@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
   
   namespace :v1, path: '/' do
-    resources :articles
+    resources :articles, only: [:new, :show, :create]
     get '/', to: 'home#index'
-    get '/:slug', to: 'home#show'
+    get '/:slug', to: 'home#show', as: :show_article
   end
 end

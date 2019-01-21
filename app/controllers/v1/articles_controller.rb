@@ -9,7 +9,7 @@ class V1::ArticlesController < ApplicationController
     @article = Article.new(article_params)
     if @article.save
       @article.render_body
-      redirect_to v1_article_path(@article), notice: 'Foi'
+      redirect_to v1_show_article_path({slug: @article.slug}), notice: 'Foi'
     else
       render :new
     end
