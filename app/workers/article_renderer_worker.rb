@@ -5,7 +5,9 @@ class ArticleRendererWorker
     article = Article.find_by(id: article_id)
     return if article.nil?
 
-    html = MarkdownRendererService.new(article.body).html
-    article.update!(body_rendered: html)
+    html = ParserService.new(article.body).html
+    resume = ParserService.new(article.body).preview
+
+    article.update!({body_rendered: html, resume: resume})
   end
 end
