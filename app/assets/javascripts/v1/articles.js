@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).on('turbolinks:load', function () {
   $('#live-preview-html').hide();
   $('#btn-preview').click(function (e) {
     console.log('Clicou pro preview')
