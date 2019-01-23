@@ -15,7 +15,7 @@ RSpec.feature "Articles", type: :feature do
         visit(new_v1_article_path)
         fill_in 'article_title', with: 'Meu artigo com titulo'
         fill_in 'article_body', with: 'O corpo do **artigo**'
-        click_button 'Create Article'
+        click_button 'Publish'
          expect(find('h1').text).to match(/Meu artigo com titulo/)
       end
 
@@ -23,7 +23,7 @@ RSpec.feature "Articles", type: :feature do
         visit(new_v1_article_path)
         fill_in 'article_title', with: 'Meu artigo com titulo'
         fill_in 'article_body', with: 'O corpo do **artigo**'
-        click_button 'Create Article'
+        click_button 'Publish'
         expect(page).to have_current_path(v1_show_article_path({slug: 'meu-artigo-com-titulo'}))
       end
     end

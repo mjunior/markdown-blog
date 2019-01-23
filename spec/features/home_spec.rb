@@ -14,7 +14,7 @@ RSpec.feature "Home", type: :feature do
     end
     it 'render all articles' do
       visit(root_path)
-      expect(find_all('.article__title').size).to eql(10)
+      expect(find_all('.article-title').size).to eql(10)
     end
   end
 end
