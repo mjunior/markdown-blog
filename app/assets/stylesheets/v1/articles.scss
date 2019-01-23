@@ -19,11 +19,12 @@ textarea:focus {
 .input-body{
   height: 80vh;
 }
-
+.actions{
+position: absolute;
+top: 17px;
+right: 14%;
+}
 .publish-button{
-  position: absolute;
-  top: 17px;
-  right: 14%;
   background: transparent;
   border: 2px solid;
   border-radius: 10px;

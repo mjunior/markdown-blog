@@ -26,6 +26,7 @@ gem 'sidekiq'
 gem 'redcarpet'
 gem 'devise'
 gem 'friendly_id'
+gem 'jquery-rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
