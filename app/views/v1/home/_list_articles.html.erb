@@ -1,0 +1,13 @@
+<% articles.each do |article| %>
+  <div class="painel">
+    <div class="painel-header">
+      <h1 class="article-title"> 
+        <%= link_to(article.title, v1_show_article_path({slug: article.slug})) %>
+      </h1>
+      <small class="published_at"><%= article.published_at %></small>
+    </div>
+    <div class="painel-body">
+      <p><%= article.preview %></p>
+    </div>
+  </div>
+<% end %>

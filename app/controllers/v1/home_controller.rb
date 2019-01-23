@@ -1,6 +1,10 @@
 class V1::HomeController < ApplicationController
   def index
-    @articles = ArticleDecorator.collection(Article.all)
+    @articles = ArticleDecorator.collection(Article.all.paginate(page: params[:page]))
+    respond_to do |format|
+      format.js
+      format.html
+    end
   end
 
   def show
