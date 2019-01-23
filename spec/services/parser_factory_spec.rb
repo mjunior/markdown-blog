@@ -17,7 +17,7 @@ RSpec.describe ParserFactory do
 
   context "When type doesnt exist" do
     it 'raise a exception' do
-      expect { ParserFactory.for('NIL')  }.to raise_error(RuntimeError, 'Unsupported type NIL of render')
+      expect { ParserFactory.for('NIL')  }.to raise_error(RuntimeError, 'Unsupported type of render')
     end
   end
 end
