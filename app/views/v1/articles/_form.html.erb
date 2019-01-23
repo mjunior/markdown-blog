@@ -9,18 +9,25 @@
       </ul>
     </div>
   <% end %>
+  <div id="form-body">
+    <div class="field">
+      <%# form.label :title %>
+      <%= form.text_field :title, placeholder: 'Your title', class: 'input-form input-title' %>
+    </div>
 
-  <div class="field">
-    <%# form.label :title %>
-    <%= form.text_field :title, placeholder: 'Your title', class: 'input-form input-title' %>
-  </div>
-
-  <div class="field">
-    <%# form.label :body %>
-    <%= form.text_area :body, placeholder: 'Your story', class: 'input-form input-body' %>
+    <div class="field">
+      <%# form.label :body %>
+      <%= form.text_area :body, placeholder: 'Your story', class: 'input-form input-body' %>
+    </div>
   </div>
 
   <div class="actions">
+    <button id="btn-preview" class="publish-button" >Preview</button>
     <%= form.submit "Publish", class: 'publish-button' %>
   </div>
 <% end %>
+
+<div id="live-preview-html">
+  <button id="close-preview" class="publish-button" >Close preview</button>
+  <div></div>
+</div>
