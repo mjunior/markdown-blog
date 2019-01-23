@@ -10,8 +10,9 @@ class ArticleDecorator < SimpleDelegator
     body_rendered.html_safe
   end
 
-  def resume
-    body[0, 124]
+  def preview
+    return '<p>Processando...</p>'.html_safe if resume.nil?
+    resume.html_safe
   end
 
   def published_at

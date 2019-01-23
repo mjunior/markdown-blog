@@ -6,6 +6,8 @@ class ArticleRendererWorker
     return if article.nil?
 
     html = ParserService.new(article.body).html
-    article.update!(body_rendered: html)
+    resume = ParserService.new(article.body).preview
+
+    article.update!({body_rendered: html, resume: resume})
   end
 end
