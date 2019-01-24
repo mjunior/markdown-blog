@@ -14,14 +14,14 @@
 
 **Acesso publico**
 
-`localhost:3000/` - Lista todos os artigos processados
-`localhost:3000/:SLUG` - Visualiza um artigo
+`localhost:3000/` - Lista todos os artigos processados<br />
+`localhost:3000/:SLUG` - Visualiza um artigo<br />
 
 **Acesso privado**
 
-`localhost:3000/users/sign_in` - Efetua login
-`localhost:3000/articles` - Lista todos os artigos
-`localhost:3000/articles/new` - Cria um novo artigo
+`localhost:3000/users/sign_in` - Efetua login<br />
+`localhost:3000/articles` - Lista todos os artigos<br />
+`localhost:3000/articles/new` - Cria um novo artigo<br />
 
 **Usuário para login**
 
