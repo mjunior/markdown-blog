@@ -50,6 +50,7 @@ group :development, :test do
   gem 'pry'
   gem 'pry-remote'
   gem 'pry-nav'
+  gem 'simplecov', require: false, group: :test
 end
 
 group :development do

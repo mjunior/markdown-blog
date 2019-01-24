@@ -10,7 +10,7 @@ RSpec.feature "Home", type: :feature do
     end
     it 'render the title Todos os artigos' do
       visit(root_path)
-      expect(page).to have_content(/Publish Articles/)
+      expect(page).to have_content(/Artigos publicados/)
     end
     it 'render all articles' do
       visit(root_path)
