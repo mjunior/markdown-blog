@@ -1,0 +1,10 @@
+pt-BR:
+  v1:
+    articles:
+      form:
+        publish: 'Publicar'
+        preview: 'Pré-visualização'
+        close-preview: 'Fechar pré-visualização'
+        placeholder:
+          title: 'Seu título'
+          body: 'Conteúdo do artigo'

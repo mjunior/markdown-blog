@@ -1,0 +1,10 @@
+pt-BR:
+  v1:
+    articles:
+      index:
+        title: 'Todos os artigos'
+        published_at: 'Publicado em'
+      new:
+        placeholder:
+          title: 'Seu Título'
+          body: 'Conteúdo do artigo'

@@ -12,22 +12,22 @@
   <div id="form-body">
     <div class="field">
       <%# form.label :title %>
-      <%= form.text_field :title, placeholder: 'Your title', class: 'input-form input-title' %>
+      <%= form.text_field :title, placeholder: t('.placeholder.title'), class: 'input-form input-title' %>
     </div>
 
     <div class="field">
       <%# form.label :body %>
-      <%= form.text_area :body, placeholder: 'Your story', class: 'input-form input-body' %>
+      <%= form.text_area :body, placeholder: t('.placeholder.body'), class: 'input-form input-body' %>
     </div>
   </div>
 
   <div class="actions">
-    <button id="btn-preview" class="publish-button" >Preview</button>
-    <%= form.submit "Publish", class: 'publish-button' %>
+    <button id="btn-preview" class="publish-button" ><%= t('.preview') %></button>
+    <%= form.submit t('.publish'), class: 'publish-button' %>
   </div>
 <% end %>
 
 <div id="live-preview-html">
-  <button id="close-preview" class="publish-button" >Close preview</button>
+  <button id="close-preview" class="publish-button" ><%= t('.close-preview') %></button>
   <div></div>
 </div>
