@@ -7,14 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create(
-  email: 'mauriciojs.junior@gmail.com',
+  email: 'admin@admin.com',
   password: '123mudar',
   password_confirmation: '123mudar'
-)
-
-10.times do |x| 
-  article = Article.create(title: "Meu artigo #{x}", 
-                          body: "Este é o conteudo **#{x}** do meu artigo *#{x}* ##Fim",
-                          author: User.last)
-  ArticleRendererWorker.new.perform(article.id)
-end
+);

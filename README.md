@@ -1,5 +1,103 @@
 ![Bio Ritmo / Smart Fit](https://github.com/bioritmo/front-end-code-challenge/blob/master/biodevteam-2018.png)
 
+# Iniciando a aplicação
+
+`docker-compose build`
+
+`docker-compose run --rm website bundle install`
+
+`docker-compose run --rm website bundle exec rake db:create db:migrate db:seed`
+
+`docker-compose up`
+
+# Aplicação
+
+**Acesso publico**
+
+`localhost:3000/` - Lista todos os artigos processados
+`localhost:3000/:SLUG` - Visualiza um artigo
+
+**Acesso privado**
+
+`localhost:3000/users/sign_in` - Efetua login
+`localhost:3000/articles` - Lista todos os artigos
+`localhost:3000/articles/new` - Cria um novo artigo
+
+**Usuário para login**
+
+E-mail: admin@admin.com <br />
+Password: 123mudar
+
+Obs: O Usuário é criado ao executar o db:seed
+
+# Rodando os tests
+
+`docker-compose run --rm website bundle exec rspec -fd`
+
+```
+V1::ArticlesController
+  GET #new
+    when signed user
+      returns http success
+    when not signed user
+      return http status 302
+  POST #create
+    with valid params
+      create a new article
+    with invalid params
+      desnt create a new article
+
+V1::HomeController
+  GET #index
+    returns http success
+  GET #show
+    returns http success
+
+ArticleDecorator
+  When the body isnt rendered
+    returns processing message
+  Whe the body is rendered
+    returns a html
+
+Articles
+  #new
+    When fill with the valid values
+      show to the article details
+      redirect to the correct page
+
+Home
+  When access the index
+    render the title Todos os artigos
+    render all articles
+
+Article
+  validations
+    should validate that :title cannot be empty/falsy
+    should validate that :body cannot be empty/falsy
+
+ParserFactory
+  When type is HTML
+    returns a correct html
+  When type is STRING
+    returns a clean string
+  When type doesnt exist
+    raise a exception
+
+ParserService
+  #html
+    returns a correct html
+  #preview
+    returns a clean string
+
+ArticleRendererWorker
+  When a message arrives
+    renderer correct html
+
+Finished in 1.36 seconds (files took 1.08 seconds to load)
+20 examples, 0 failures
+```
+![Coverage](coverage-img.jpg)
+
 # Backend code challenge
 
 Este teste é apresentado às pessoas que estão se candidatando às vagas de desenvolvimento Backend.

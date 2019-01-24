@@ -14,7 +14,5 @@ RSpec.describe V1::HomeController, type: :controller do
       get :show, params: { slug: article.slug }  
       expect(response).to have_http_status(:success)
     end
-
-    it 'returns 404'
   end
 end
