@@ -14,7 +14,7 @@ User.create(
 
 10.times do |x| 
   article = Article.create(title: "Meu artigo #{x}", 
-                          body: "Este é o conteudo *#{x}* do meu artigo *#{x}* ## Fim",
+                          body: "Este é o conteudo **#{x}** do meu artigo *#{x}* ##Fim",
                           author: User.last)
   ArticleRendererWorker.new.perform(article.id)
 end
