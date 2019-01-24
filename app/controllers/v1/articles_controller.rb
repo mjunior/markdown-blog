@@ -1,6 +1,6 @@
 class V1::ArticlesController < ApplicationController
   before_action :authenticate_user!
-  
+
   def new
     @article = Article.new
   end
@@ -9,9 +9,17 @@ class V1::ArticlesController < ApplicationController
     @article = Article.new(article_params)
     if @article.save
       @article.render_body
-      redirect_to v1_show_article_path({slug: @article.slug}), notice: 'Foi'
+      redirect_to v1_articles_path, notice: 'Sucesso'
     else
       render :new
+    end
+  end
+
+  def index
+    @articles = ArticleDecorator.collection(Article.paginate(page: params[:page]))
+    respond_to do |format|
+      format.js
+      format.html
     end
   end
 
