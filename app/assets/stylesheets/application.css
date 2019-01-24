@@ -19,6 +19,9 @@
  *{
    font-family: 'Open Sans', sans-serif;
  }
+ div#error_explanation {
+   color: red;
+ }
  /* Grid */ 
 .container{
   display: flex;
